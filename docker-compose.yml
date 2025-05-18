@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  llm-studio:
+    build:
+      context: ./llm_studio
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./models:/models
+
+  llm-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - llm-studio
+    volumes:
+      - ./logs:/app/logs
+    working_dir: /app
+    command: ["python", "llm_agent/app.py"]

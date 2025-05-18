@@ -1,0 +1,6 @@
+https://huggingface.co/Qwen/Qwen3-8B?local-app=vllm
+https://huggingface.co/welcome
+https://lmstudio.ai/model/qwen3-8b
+
+
+docker-compose up --build
