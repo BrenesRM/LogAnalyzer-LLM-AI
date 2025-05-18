@@ -82,6 +82,7 @@ Editar
   ],  
   "confidence_score": 0.93  
 }  
+  
 📄 Security Analysis  
 This project uses GitHub’s built-in security scanning. You can view the current status here.  
 
