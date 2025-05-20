@@ -1,3 +1,22 @@
-fastapi
-uvicorn
-requests
+# Core Requirements
+llama-cpp-python==0.2.26  # Main LLM interface with Qwen support
+flask==3.0.0  # Web framework for API endpoints
+gunicorn==21.2.0  # Production WSGI server
+python-dotenv==1.0.0  # Environment variable management
+
+# Security
+bcrypt==4.0.1  # Password hashing
+python-jose==3.3.0  # JWT support (for API auth)
+cryptography==41.0.5  # Encryption support
+
+# Performance
+uvloop==0.18.0  # Fast event loop (Linux only)
+httptools==0.6.0  # Fast HTTP parser
+
+# Monitoring
+prometheus-client==0.17.1  # Metrics collection
+blinker==1.7.0  # Application signals
+
+# Development (optional)
+debugpy==1.8.0  # Remote debugging
+pytest==7.4.2  # Testing framework

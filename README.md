@@ -1,94 +1,35 @@
-LogAnalyzer-LLM-AI  
-A powerful AI agent that leverages large language models (LLMs) to automatically analyze log files, identify anomalies, and suggest actionable mitigations. Powered by LLM Studio and the Qwen3-8B-Q4_K_M.gguf model, this tool is designed for cybersecurity professionals, system administrators, and researchers.  
+# LogAnalyzer-LLM-AI
 
-🚀 Features  
-Uses a local LLM (Qwen3-8B-Q4_K_M.gguf) for offline log analysis.  
+![Project Architecture](docs/architecture.png)
 
-Fully containerized via Docker & LLM Studio.  
+A containerized log analysis system powered by Qwen-3-8B LLM, featuring:
+- Real-time log analysis with AI insights
+- Web interface for manual log review
+- Automated log processing agent
+- Docker-based deployment
 
-Parses structured and semi-structured logs (e.g., syslog, Apache, custom).  
+## Key Features to be installed
 
-Identifies suspicious patterns, anomalies, and errors.  
+- 🛡️ **Security-Focused Analysis**: Detects anomalies, attacks, and compliance issues
+- 🤖 **AI-Powered Insights**: Uses Qwen3-8B model for contextual understanding
+- 🚀 **Scalable Architecture**: Microservices design with Docker Compose
+- 📊 **Interactive Web UI**: Visualize and explore log analysis results
+- 🔄 **Continuous Processing**: Automated agent for ongoing monitoring
 
-Provides human-readable summaries and remediation suggestions.  
+## Technologies
 
-🧠 Model & Technology  
-🔹 LLM: Qwen3-8B-Q4_K_M.gguf (quantized, optimized for inference)  
+- **LLM Backend**: Qwen3-8B-Q4_K_M.gguf via llama.cpp
+- **Web Framework**: Flask + Gunicorn
+- **Containerization**: Docker + Docker Compose
+- **Frontend**: HTML5, JavaScript, Bootstrap
+- **Log Processing**: Custom Python agent
 
-🔹 Framework: LLM Studio (local LLM orchestration)  
+## Quick Start
 
-🔹 AI Agent: Task-driven assistant that interprets log content and suggests fixes  
+### Prerequisites
 
-🔹 Environment: Docker Compose for reproducibility and isolation  
+- Docker Engine 20.10+
+- Docker Compose 2.0+
+- NVIDIA Container Toolkit (for GPU acceleration)
+- At least 8GB RAM (16GB recommended)
 
-🛠️ Installation  
-1. Clone the Repository  
-bash  
-Copiar  
-Editar  
-git clone https://github.com/BrenesRM/LogAnalyzer-LLM-AI.git  
-cd LogAnalyzer-LLM-AI
-
-3. Download the Model  
-Download the Qwen3-8B-Q4_K_M.gguf model and place it in the models directory.  
-
-You can find it from Hugging Face or compatible repositories. Example:  
-
-bash  
-Copiar  
-Editar  
-mkdir -p models/qwen   
-# Replace the URL below with the actual source  
-wget -O models/qwen/Qwen3-8B-Q4_K_M.gguf https://huggingface.co/...  
-
-3. Build and Launch the Environment  
-Ensure you have Docker and Docker Compose installed:  
-
-bash  
-Copiar  
-Editar  
-docker-compose up --build  
-This will:  
-
-Start the LLM backend using LLM Studio  
-
-Launch the AI log analysis agent  
-
-📂 Usage  
-Upload or specify the log file to analyze using the API or frontend (if implemented). Example:  
-
-bash  
-Copiar    
-Editar  
-curl -F "log=@/path/to/log.txt" http://localhost:8000/analyze  
-The AI will return a structured JSON report with:  
-
-📌 Detected issues  
-
-🧠 Natural language summary  
-
-✅ Suggested mitigations  
-
-🧪 Example Output  
-json  
-Copiar  
-Editar  
-{  
-  "summary": "Repeated failed SSH login attempts from 192.168.1.20",  
-  "suggestions": [  
-    "Block the IP address using the firewall",  
-    "Check for signs of brute-force attack",  
-    "Enable rate-limiting on SSH"  
-  ],  
-  "confidence_score": 0.93  
-}  
-  
-📄 Security Analysis  
-This project uses GitHub’s built-in security scanning. You can view the current status here.  
-
-📜 License  
-MIT License. See LICENSE for details.  
-  
-🙋‍♂️ Author  
-Marlon Esteban Brenes Rojas  
-Master's Student in Cybersecurity – NYIT Vancouver  

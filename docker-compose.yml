@@ -1,21 +1,30 @@
-version: "3"
+version: '3.8'
 
 services:
-  llm-studio:
-    build:
-      context: ./llm_studio
+  llm_service:
+    build: ./llm_service
     ports:
-      - "7860:7860"
+      - "5001:5000"
     volumes:
-      - ./models:/models
-
-  llm-agent:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    depends_on:
-      - llm-studio
-    volumes:
-      - ./logs:/app/logs
+      - ./llm_service/models:/app/models
+      - ./llm_service/prompts:/app/prompts
     working_dir: /app
-    command: ["python", "llm_agent/app.py"]
+    command: python app.py
+    env_file:
+      - .env
+    restart: unless-stopped
+
+  ai_agent:
+    build: ./ai_agent
+    ports:
+      - "5002:5002"
+    depends_on:
+      - llm_service
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: bridge

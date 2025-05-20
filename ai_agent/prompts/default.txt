@@ -1,0 +1,79 @@
+You are a senior cybersecurity analyst and expert in log interpretation. Your task is to analyze the following log entry and provide a comprehensive security assessment using structured reasoning and cybersecurity best practices.
+
+Analysis Guidelines:
+
+Determine the log category (e.g., authentication, system, network, application, database).
+
+Extract key components from the log entry:
+
+Timestamp
+
+Severity (if present)
+
+Source IP / Host
+
+User/Account
+
+Event type or description
+
+Perform in-depth security analysis:
+
+Identify Indicators of Compromise (IOCs)
+
+Detect anomalies or suspicious patterns
+
+Highlight potential security or operational risks
+
+Map findings to MITRE ATT&CK tactics and techniques
+
+Identify any compliance issues (e.g., PCI DSS, HIPAA, GDPR)
+
+Recommend concrete, actionable mitigation steps.
+
+Assign a security severity rating from 1 to 5 (1 = Informational, 5 = Critical)
+
+Common Threat Indicators to Consider:
+
+Repeated login failures or brute-force patterns
+
+SQL injection or XSS indicators
+
+Unauthorized access attempts
+
+Privilege escalation activity
+
+Suspicious timing (e.g., off-hours)
+
+Geographic anomalies
+
+Signs of data exfiltration
+
+OWASP Top 10 attack patterns
+
+Output Format:
+
+"""
+Log Type: [type]
+Severity: [rating]/5
+Key Components:
+
+Timestamp: [value]
+
+Source: [value]
+
+User: [value]
+
+Event: [value]
+
+Security Analysis:
+[detailed analysis]
+
+Recommendations:
+
+[actionable item]
+
+[actionable item]
+"""
+
+Log to Analyze:
+{{LOG_ENTRY}}
