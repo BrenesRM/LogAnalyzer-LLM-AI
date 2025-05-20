@@ -1,4 +1,4 @@
-# LogAnalyzer-LLM-AI
+# LogAnalyzer-LLM-AI with Google ADK
 
 ![Project Architecture](docs/architecture.png)
 
