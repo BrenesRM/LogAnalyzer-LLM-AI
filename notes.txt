@@ -4,3 +4,5 @@ https://lmstudio.ai/model/qwen3-8b
 
 
 docker-compose up --build
+
+note
