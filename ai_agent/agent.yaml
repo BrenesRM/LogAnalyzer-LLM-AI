@@ -1,0 +1,12 @@
+agent:
+  type: llm
+  name: ai_agent
+  model: llama
+  endpoint: http://localhost:5001/analyze
+  instruction: |
+    You are a helpful assistant. Answer the following input clearly.
+
+    {{input}}
+
+
+
