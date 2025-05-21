@@ -32,4 +32,6 @@ A containerized log analysis system powered by Qwen-3-8B LLM, featuring:
 - Docker Compose 2.0+
 - NVIDIA Container Toolkit (for GPU acceleration)
 - At least 8GB RAM (16GB recommended)
+- Using LLM Studio Download the model required in .guff architecture
+- Copy the model into the folder Model and change if is different at Qwen3-8B-Q4_K_M.gguf into .ENV file
 
