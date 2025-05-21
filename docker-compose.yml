@@ -13,6 +13,8 @@ services:
     env_file:
       - .env
     restart: unless-stopped
+    networks:
+      - ai_net
 
   ai_agent:
     build: ./ai_agent
@@ -24,7 +26,9 @@ services:
     stdin_open: true
     tty: true
     restart: unless-stopped
+    networks:
+      - ai_net
 
 networks:
-  default:
+  ai_net:
     driver: bridge
