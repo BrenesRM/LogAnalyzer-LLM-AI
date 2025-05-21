@@ -6,9 +6,9 @@ You want to use the Qwen1.5-8B-Q4_K_M.gguf model with llama.cpp or a similar bac
 
 You have enough disk space (~4–6 GB depending on quantization).
 
-✅ Step 1: Download the Model from Hugging Face
-Visit the official Hugging Face repo:
-👉 https://huggingface.co/Qwen/Qwen1.5-8B-GGUF
+✅ Step 1: Download the Model from https://lmstudio.ai/docs/app/api
+Visit the official repo:
+👉 https://lmstudio.ai/docs/app/api
 
 Download this file:
 
