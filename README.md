@@ -4,7 +4,7 @@
 
 A containerized log analysis system powered by Qwen-3-8B LLM, featuring:
 - Real-time log analysis with AI insights
-- Web interface for manual log review
+- Web interface for manual log review, LOG_Example.json to test
 - Automated log processing agent
 - Docker-based deployment
 
@@ -13,7 +13,7 @@ A containerized log analysis system powered by Qwen-3-8B LLM, featuring:
 - 🛡️ **Security-Focused Analysis**: Detects anomalies, attacks, and compliance issues
 - 🤖 **AI-Powered Insights**: Uses Qwen3-8B model for contextual understanding
 - 🚀 **Scalable Architecture**: Microservices design with Docker Compose
-- 📊 **Interactive Web UI**: Visualize and explore log analysis results
+- 📊 **Interactive Web UI**: Visualize and explore log analysis results (http://127.0.0.1:5003⁠)
 - 🔄 **Continuous Processing**: Automated agent for ongoing monitoring
 
 ## Technologies
