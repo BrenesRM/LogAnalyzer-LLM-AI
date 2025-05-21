@@ -1,0 +1,14 @@
+{
+  "log": [
+    "Failed SSH login attempt from 10.0.0.5",
+    "New user created: attacker123",
+    "Unexpected sudo access granted to user alice",
+    "User login successful: john_doe",
+    "Failed login attempt from suspicious IP: 203.0.113.77",
+    "Database connection error: timeout from 172.16.0.22",
+    "File /etc/passwd modified by root",
+    "Multiple failed login attempts from 10.10.10.10",
+    "Web application error: SQL syntax error on /login",
+    "Firewall rule modified by admin"
+  ]
+}

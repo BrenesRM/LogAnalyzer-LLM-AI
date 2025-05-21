@@ -29,6 +29,16 @@ services:
     networks:
       - ai_net
 
+  web_ui:
+    build: ./web-ui
+    ports:
+      - "5003:5003"
+    depends_on:
+      - llm_service
+    restart: unless-stopped
+    networks:
+      - ai_net
+
 networks:
   ai_net:
     driver: bridge

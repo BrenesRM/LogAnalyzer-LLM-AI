@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LLM Log Analyzer</title>
+</head>
+<body>
+    <h2>Log Analyzer UI</h2>
+    <form method="post">
+        <textarea name="logs" rows="10" cols="80" placeholder="Paste logs here">{{ logs }}</textarea><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h3>Results</h3>
+        <ul>
+            {% for entry in result['results'] %}
+                <li><strong>Log:</strong> {{ entry['log'] }}<br>
+                    <pre>{{ entry['analysis'] }}</pre>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
