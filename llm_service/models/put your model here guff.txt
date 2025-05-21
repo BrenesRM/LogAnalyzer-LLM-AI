@@ -1,0 +1,70 @@
+Mini Guide: Copy Qwen1.5-8B-Q4_K_M.gguf to LLM Studio
+🔧 Prerequisites
+You have LLM Studio installed and set up locally.
+
+You want to use the Qwen1.5-8B-Q4_K_M.gguf model with llama.cpp or a similar backend.
+
+You have enough disk space (~4–6 GB depending on quantization).
+
+✅ Step 1: Download the Model from Hugging Face
+Visit the official Hugging Face repo:
+👉 https://huggingface.co/Qwen/Qwen1.5-8B-GGUF
+
+Download this file:
+
+Copiar
+Editar
+Qwen1.5-8B-Q4_K_M.gguf
+Alternatively, use wget or huggingface_hub:
+
+bash
+Copiar
+Editar
+wget https://huggingface.co/Qwen/Qwen1.5-8B-GGUF/resolve/main/Qwen1.5-8B-Q4_K_M.gguf
+✅ Step 2: Create the model Folder in LLM Studio (if it doesn’t exist)
+Assuming your llm_service project structure is:
+
+Copiar
+Editar
+llm-service/
+├── models/
+├── app.py
+├── Dockerfile
+└── ...
+If the folder doesn’t exist, create it:
+
+bash
+Copiar
+Editar
+mkdir -p llm-service/model
+✅ Step 3: Move the Model File
+Move the downloaded .gguf file to the model folder:
+
+bash
+Copiar
+Editar
+mv Qwen1.5-8B-Q4_K_M.gguf llm-service/model/
+If you're using Windows:
+
+powershell
+Copiar
+Editar
+Move-Item .\Qwen1.5-8B-Q4_K_M.gguf .\llm-service\model\
+✅ Step 4: Update Your llm_service Code to Use It
+In your llm_service/app.py (or wherever you launch llama_cpp.Llama), make sure the path points to the file:
+
+✅ Step 5: (Optional) Add .gitignore Entry
+Avoid uploading large models to GitHub:
+
+bash
+Copiar
+Editar
+# .gitignore
+model/*.gguf
+🧪 Final Check
+Run your Flask or Docker service and check the logs for:
+
+csharp
+Copiar
+Editar
+loading model from model/Qwen1.5-8B-Q4_K_M.gguf
